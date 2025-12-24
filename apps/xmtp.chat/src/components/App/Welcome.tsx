@@ -7,7 +7,7 @@ import {
   useMatches,
 } from "@mantine/core";
 import { Connect } from "@/components/App/Connect";
-import logo from "../../../../arilogo.png";
+import logo from "@root/arilogo.png";
 
 export const Welcome = () => {
   const px = useMatches({

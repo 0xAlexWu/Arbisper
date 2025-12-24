@@ -1,5 +1,5 @@
 import { Box, Flex, Group, Image, Text } from "@mantine/core";
-import logo from "../../../../arilogo.png";
+import logo from "@root/arilogo.png";
 
 export const AppFooter: React.FC = () => {
   return (
