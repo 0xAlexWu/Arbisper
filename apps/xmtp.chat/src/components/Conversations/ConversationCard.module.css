@@ -1,0 +1,38 @@
+.root {
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.root:hover {
+  background-color: var(--mantine-color-default-hover);
+}
+
+.root:focus {
+  border-color: var(--mantine-primary-color-filled);
+}
+
+.selected {
+  background-color: #316ac5 !important;
+  color: #ffffff !important;
+  border: 2px inset #316ac5 !important;
+  box-shadow: 
+    inset 1px 1px 0 rgba(255, 255, 255, 0.3),
+    inset -1px -1px 0 rgba(0, 0, 0, 0.2),
+    0 0 8px rgba(49, 106, 197, 0.6) !important;
+  animation: win2003-selected-pulse 2s ease-in-out infinite;
+}
+
+@keyframes win2003-selected-pulse {
+  0%, 100% {
+    box-shadow: 
+      inset 1px 1px 0 rgba(255, 255, 255, 0.3),
+      inset -1px -1px 0 rgba(0, 0, 0, 0.2),
+      0 0 8px rgba(49, 106, 197, 0.6);
+  }
+  50% {
+    box-shadow: 
+      inset 1px 1px 0 rgba(255, 255, 255, 0.3),
+      inset -1px -1px 0 rgba(0, 0, 0, 0.2),
+      0 0 12px rgba(49, 106, 197, 0.8);
+  }
+}

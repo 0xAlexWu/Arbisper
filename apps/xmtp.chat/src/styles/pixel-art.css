@@ -1,0 +1,675 @@
+/* Pixel Art Style + Windows 2003 Retro Style Global Styles */
+* {
+  image-rendering: pixelated;
+  image-rendering: -moz-crisp-edges;
+  image-rendering: crisp-edges;
+}
+
+/* Fade in animation for welcome page */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in-up {
+  animation: fadeInUp 0.8s ease-out forwards;
+  opacity: 0;
+}
+
+.fade-in-up-delay-1 {
+  animation: fadeInUp 0.8s ease-out 0.2s forwards;
+  opacity: 0;
+}
+
+.fade-in-up-delay-2 {
+  animation: fadeInUp 0.8s ease-out 0.4s forwards;
+  opacity: 0;
+}
+
+html,
+body {
+  font-family: 'Tahoma', 'MS Sans Serif', 'Segoe UI', sans-serif;
+  font-size: 11px;
+  -webkit-font-smoothing: none;
+  -moz-osx-font-smoothing: unset;
+}
+
+body {
+  background: #d4d0c8 url('data:image/svg+xml;utf8,<svg width="2" height="2" xmlns="http://www.w3.org/2000/svg"><rect width="2" height="2" fill="%23d4d0c8"/><rect width="1" height="1" fill="%23c0c0c0"/></svg>') repeat;
+  background-size: 2px 2px;
+  color: #000000;
+}
+
+/* Pixel art borders */
+.pixel-border {
+  border: 2px solid #32a2eb;
+  box-shadow:
+    2px 2px 0px 0px #1a8cd8,
+    4px 4px 0px 0px #0d73b3;
+}
+
+/* Pixel art button style */
+.pixel-button {
+  background-color: #32a2eb;
+  color: white;
+  border: 2px solid #1a8cd8;
+  box-shadow:
+    2px 2px 0px 0px #0d73b3,
+    4px 4px 0px 0px #005a8f;
+  transition: all 0.1s ease;
+}
+
+.pixel-button:hover {
+  transform: translate(2px, 2px);
+  box-shadow:
+    1px 1px 0px 0px #0d73b3,
+    2px 2px 0px 0px #005a8f;
+}
+
+.pixel-button:active {
+  transform: translate(4px, 4px);
+  box-shadow: none;
+}
+
+/* Pixel art card style */
+.pixel-card {
+  background-color: #ffffff;
+  border: 2px solid #32a2eb;
+  box-shadow:
+    2px 2px 0px 0px #b3d9ff,
+    4px 4px 0px 0px #80bfff;
+}
+
+/* Glow effect for selected items */
+.pixel-glow {
+  box-shadow:
+    0 0 10px #32a2eb,
+    0 0 20px #32a2eb,
+    0 0 30px #32a2eb,
+    2px 2px 0px 0px #1a8cd8;
+  animation: pixel-glow-pulse 2s ease-in-out infinite;
+}
+
+@keyframes pixel-glow-pulse {
+
+  0%,
+  100% {
+    box-shadow:
+      0 0 10px #32a2eb,
+      0 0 20px #32a2eb,
+      0 0 30px #32a2eb,
+      2px 2px 0px 0px #1a8cd8;
+  }
+
+  50% {
+    box-shadow:
+      0 0 15px #32a2eb,
+      0 0 25px #32a2eb,
+      0 0 35px #32a2eb,
+      2px 2px 0px 0px #1a8cd8;
+  }
+}
+
+/* Blink animation for ready to enter text */
+@keyframes blink {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.3;
+  }
+}
+
+.blink-text {
+  animation: blink 1s ease-in-out infinite;
+}
+
+/* Progress bar pixel style */
+.pixel-progress {
+  background-color: #e6f4ff;
+  border: 2px solid #32a2eb;
+  height: 24px;
+  position: relative;
+  overflow: hidden;
+}
+
+.pixel-progress-bar {
+  background-color: #32a2eb;
+  height: 100%;
+  transition: width 0.3s ease;
+  box-shadow: inset 0 0 10px rgba(255, 255, 255, 0.3);
+}
+
+.pixel-progress-bar::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: repeating-linear-gradient(90deg,
+      transparent,
+      transparent 4px,
+      rgba(255, 255, 255, 0.1) 4px,
+      rgba(255, 255, 255, 0.1) 8px);
+}
+
+/* Windows 2003/XP Classic Style */
+.win2003-window {
+  background: #ece9d8;
+  border: 2px outset #ece9d8;
+  box-shadow:
+    inset -1px -1px 0 #ffffff,
+    inset 1px 1px 0 #808080,
+    2px 2px 0 #000000;
+}
+
+.win2003-button {
+  background: #ece9d8;
+  border: 2px outset #ece9d8;
+  color: #000000;
+  padding: 2px 12px;
+  font-family: 'Tahoma', 'MS Sans Serif', sans-serif;
+  font-size: 11px;
+  cursor: pointer;
+  box-shadow:
+    inset -1px -1px 0 #ffffff,
+    inset 1px 1px 0 #808080;
+  text-shadow: none;
+}
+
+.win2003-button:hover {
+  background: #f0f0f0;
+  border: 2px outset #f0f0f0;
+}
+
+.win2003-button:active {
+  border: 2px inset #ece9d8;
+  box-shadow:
+    inset 1px 1px 0 #808080,
+    inset -1px -1px 0 #ffffff;
+  background: #d4d0c8;
+}
+
+.win2003-button:focus {
+  outline: 1px dotted #000000;
+  outline-offset: -3px;
+}
+
+/* Windows 2003 Input Fields */
+.win2003-input {
+  background: #ffffff;
+  border: 2px inset #ece9d8;
+  color: #000000;
+  padding: 2px 4px;
+  font-family: 'Tahoma', 'MS Sans Serif', sans-serif;
+  font-size: 11px;
+  box-shadow:
+    inset 1px 1px 0 #808080,
+    inset -1px -1px 0 #ffffff;
+}
+
+.win2003-input:focus {
+  outline: 1px dotted #000000;
+  outline-offset: -2px;
+}
+
+/* Windows 2003 Card/Paper */
+.win2003-card {
+  background: #ece9d8;
+  border: 2px inset #ece9d8;
+  box-shadow:
+    inset 1px 1px 0 #808080,
+    inset -1px -1px 0 #ffffff;
+}
+
+/* Windows 2003 Scrollbar */
+.win2003-scrollbar {
+  background: #ece9d8;
+  border: 1px solid #808080;
+}
+
+.win2003-scrollbar-thumb {
+  background: #c0c0c0;
+  border: 1px outset #c0c0c0;
+  box-shadow:
+    inset -1px -1px 0 #ffffff,
+    inset 1px 1px 0 #808080;
+}
+
+.win2003-scrollbar-thumb:hover {
+  background: #d4d0c8;
+}
+
+.win2003-scrollbar-thumb:active {
+  background: #a0a0a0;
+  border: 1px inset #a0a0a0;
+  box-shadow:
+    inset 1px 1px 0 #808080,
+    inset -1px -1px 0 #ffffff;
+}
+
+/* Windows 2003 Menu */
+.win2003-menu {
+  background: #ece9d8;
+  border: 2px outset #ece9d8;
+  box-shadow:
+    inset -1px -1px 0 #ffffff,
+    inset 1px 1px 0 #808080,
+    2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.win2003-menu-item {
+  padding: 2px 20px 2px 24px;
+  color: #000000;
+  font-family: 'Tahoma', 'MS Sans Serif', sans-serif;
+  font-size: 11px;
+}
+
+.win2003-menu-item:hover {
+  background: #316ac5;
+  color: #ffffff;
+}
+
+.win2003-menu-item:active {
+  background: #214e8c;
+  color: #ffffff;
+}
+
+/* Windows 2003 Title Bar */
+.win2003-titlebar {
+  background: linear-gradient(to bottom, #0054e3 0%, #0066ff 50%, #0054e3 100%);
+  color: #ffffff;
+  padding: 2px 4px;
+  font-family: 'Tahoma', 'MS Sans Serif', sans-serif;
+  font-size: 11px;
+  font-weight: bold;
+  border-bottom: 1px solid #000000;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+}
+
+/* Windows 2003 Checkbox */
+.win2003-checkbox {
+  width: 13px;
+  height: 13px;
+  background: #ffffff;
+  border: 2px inset #ece9d8;
+  box-shadow:
+    inset 1px 1px 0 #808080,
+    inset -1px -1px 0 #ffffff;
+  cursor: pointer;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
+.win2003-checkbox:checked {
+  background: #ece9d8;
+  border: 2px inset #ece9d8;
+}
+
+.win2003-checkbox:checked::after {
+  content: '✓';
+  display: block;
+  text-align: center;
+  line-height: 9px;
+  font-size: 10px;
+  color: #000000;
+  font-weight: bold;
+}
+
+.win2003-checkbox:focus {
+  outline: 1px dotted #000000;
+  outline-offset: 1px;
+}
+
+/* Windows 2003 Radio Button */
+.win2003-radio {
+  width: 13px;
+  height: 13px;
+  background: #ffffff;
+  border: 2px inset #ece9d8;
+  border-radius: 50%;
+  box-shadow:
+    inset 1px 1px 0 #808080,
+    inset -1px -1px 0 #ffffff;
+  cursor: pointer;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
+.win2003-radio:checked {
+  background: #ece9d8;
+}
+
+.win2003-radio:checked::after {
+  content: '';
+  display: block;
+  width: 5px;
+  height: 5px;
+  background: #000000;
+  border-radius: 50%;
+  margin: 2px auto;
+}
+
+.win2003-radio:focus {
+  outline: 1px dotted #000000;
+  outline-offset: 1px;
+}
+
+/* Windows 2003 Select/Dropdown */
+.win2003-select {
+  background: #ffffff;
+  border: 2px inset #ece9d8;
+  color: #000000;
+  padding: 2px 20px 2px 4px;
+  font-family: 'Tahoma', 'MS Sans Serif', sans-serif;
+  font-size: 11px;
+  box-shadow:
+    inset 1px 1px 0 #808080,
+    inset -1px -1px 0 #ffffff;
+  cursor: pointer;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-image: url('data:image/svg+xml;utf8,<svg width="12" height="12" xmlns="http://www.w3.org/2000/svg"><polygon points="0,0 6,6 12,0" fill="%23000000"/></svg>');
+  background-repeat: no-repeat;
+  background-position: right 2px center;
+}
+
+.win2003-select:focus {
+  outline: 1px dotted #000000;
+  outline-offset: -2px;
+}
+
+/* Windows 2003 Progress Bar */
+.win2003-progress {
+  background: #ece9d8;
+  border: 2px inset #ece9d8;
+  height: 18px;
+  box-shadow:
+    inset 1px 1px 0 #808080,
+    inset -1px -1px 0 #ffffff;
+  overflow: hidden;
+}
+
+.win2003-progress-bar {
+  background: linear-gradient(to bottom, #316ac5 0%, #4a8cd8 50%, #316ac5 100%);
+  height: 100%;
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.3),
+    inset 0 -1px 0 rgba(0, 0, 0, 0.2);
+  border-right: 1px solid #214e8c;
+}
+
+/* Windows 2003 Tab */
+.win2003-tab {
+  background: #ece9d8;
+  border: 2px outset #ece9d8;
+  border-bottom: none;
+  padding: 2px 8px;
+  font-family: 'Tahoma', 'MS Sans Serif', sans-serif;
+  font-size: 11px;
+  color: #000000;
+  cursor: pointer;
+  box-shadow:
+    inset -1px -1px 0 #ffffff,
+    inset 1px 1px 0 #808080;
+}
+
+.win2003-tab-active {
+  background: #ece9d8;
+  border: 2px inset #ece9d8;
+  border-bottom: 2px solid #ece9d8;
+  box-shadow:
+    inset 1px 1px 0 #808080,
+    inset -1px -1px 0 #ffffff;
+  z-index: 1;
+  position: relative;
+}
+
+/* Windows 2003 Toolbar */
+.win2003-toolbar {
+  background: #ece9d8;
+  border: 1px solid #808080;
+  padding: 2px;
+  box-shadow:
+    inset -1px -1px 0 #ffffff,
+    inset 1px 1px 0 #808080;
+}
+
+.win2003-toolbar-button {
+  background: #ece9d8;
+  border: 1px solid transparent;
+  padding: 2px 4px;
+  margin: 1px;
+  cursor: pointer;
+}
+
+.win2003-toolbar-button:hover {
+  border: 1px outset #ece9d8;
+  box-shadow:
+    inset -1px -1px 0 #ffffff,
+    inset 1px 1px 0 #808080;
+}
+
+.win2003-toolbar-button:active {
+  border: 1px inset #ece9d8;
+  box-shadow:
+    inset 1px 1px 0 #808080,
+    inset -1px -1px 0 #ffffff;
+  background: #d4d0c8;
+}
+
+/* Apply Windows 2003 styles to Mantine components */
+[data-mantine-color-scheme],
+[data-mantine-color-scheme="light"],
+[data-mantine-color-scheme="dark"],
+[data-mantine-color-scheme="auto"] {
+  --mantine-color-body: #ece9d8 !important;
+  --mantine-color-text: #000000 !important;
+  --mantine-color-default: #ece9d8 !important;
+  --mantine-color-default-hover: #d4d0c8 !important;
+  --mantine-color-default-border: #808080 !important;
+}
+
+/* Force light background for all layouts */
+.mantine-MainLayout-main,
+.mantine-ContentLayout-content,
+.mantine-ContentLayout-root {
+  background-color: #ece9d8 !important;
+}
+
+/* Override Mantine Button styles with Windows 2003 style */
+.mantine-Button-root {
+  background: #ece9d8 !important;
+  border: 2px outset #ece9d8 !important;
+  color: #000000 !important;
+  font-family: 'Tahoma', 'MS Sans Serif', sans-serif !important;
+  font-size: 11px !important;
+  box-shadow:
+    inset -1px -1px 0 #ffffff,
+    inset 1px 1px 0 #808080 !important;
+  text-shadow: none !important;
+}
+
+.mantine-Button-root:hover {
+  background: #f0f0f0 !important;
+  border: 2px outset #f0f0f0 !important;
+}
+
+.mantine-Button-root:active {
+  border: 2px inset #ece9d8 !important;
+  box-shadow:
+    inset 1px 1px 0 #808080,
+    inset -1px -1px 0 #ffffff !important;
+  background: #d4d0c8 !important;
+}
+
+.mantine-Button-root[data-loading="true"] {
+  opacity: 0.6;
+}
+
+/* Override Mantine Input styles */
+.mantine-TextInput-input,
+.mantine-Textarea-input,
+.mantine-Select-input {
+  background: #ffffff !important;
+  border: 2px inset #ece9d8 !important;
+  color: #000000 !important;
+  font-family: 'Tahoma', 'MS Sans Serif', sans-serif !important;
+  font-size: 11px !important;
+  box-shadow:
+    inset 1px 1px 0 #808080,
+    inset -1px -1px 0 #ffffff !important;
+}
+
+.mantine-TextInput-input:focus,
+.mantine-Textarea-input:focus,
+.mantine-Select-input:focus {
+  outline: 1px dotted #000000 !important;
+  outline-offset: -2px !important;
+  border-color: #000000 !important;
+}
+
+/* Override Mantine Paper/Card styles */
+.mantine-Paper-root,
+.mantine-Card-root {
+  background: #ece9d8 !important;
+  border: 2px inset #ece9d8 !important;
+  box-shadow:
+    inset 1px 1px 0 #808080,
+    inset -1px -1px 0 #ffffff !important;
+}
+
+/* Override Mantine Progress styles */
+.mantine-Progress-root {
+  background: #ece9d8 !important;
+  border: 2px inset #ece9d8 !important;
+  box-shadow:
+    inset 1px 1px 0 #808080,
+    inset -1px -1px 0 #ffffff !important;
+}
+
+.mantine-Progress-bar {
+  background: linear-gradient(to bottom, #316ac5 0%, #4a8cd8 50%, #316ac5 100%) !important;
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.3),
+    inset 0 -1px 0 rgba(0, 0, 0, 0.2) !important;
+  transition: width 0.8s ease-out !important;
+}
+
+/* Override Mantine Stepper styles */
+.mantine-Stepper-step {
+  font-family: 'Tahoma', 'MS Sans Serif', sans-serif !important;
+  font-size: 11px !important;
+}
+
+.mantine-Stepper-stepLabel {
+  color: #000000 !important;
+  font-weight: normal !important;
+}
+
+.mantine-Stepper-stepIcon {
+  background: #ece9d8 !important;
+  border: 2px outset #ece9d8 !important;
+  color: #000000 !important;
+  box-shadow:
+    inset -1px -1px 0 #ffffff,
+    inset 1px 1px 0 #808080 !important;
+}
+
+.mantine-Stepper-stepIcon[data-progress="true"] {
+  background: linear-gradient(to bottom, #316ac5 0%, #4a8cd8 50%, #316ac5 100%) !important;
+  color: #ffffff !important;
+  border: 2px outset #316ac5 !important;
+}
+
+/* Override Mantine Menu styles */
+.mantine-Menu-dropdown {
+  background: #ece9d8 !important;
+  border: 2px outset #ece9d8 !important;
+  box-shadow:
+    inset -1px -1px 0 #ffffff,
+    inset 1px 1px 0 #808080,
+    2px 2px 4px rgba(0, 0, 0, 0.3) !important;
+}
+
+.mantine-Menu-item {
+  padding: 2px 20px 2px 24px !important;
+  color: #000000 !important;
+  font-family: 'Tahoma', 'MS Sans Serif', sans-serif !important;
+  font-size: 11px !important;
+}
+
+.mantine-Menu-item:hover {
+  background: #316ac5 !important;
+  color: #ffffff !important;
+}
+
+.mantine-Menu-item[data-hovered="true"] {
+  background: #316ac5 !important;
+  color: #ffffff !important;
+}
+
+/* Override Mantine Badge styles */
+.mantine-Badge-root {
+  background: #ece9d8 !important;
+  border: 1px solid #808080 !important;
+  color: #000000 !important;
+  font-family: 'Tahoma', 'MS Sans Serif', sans-serif !important;
+  font-size: 11px !important;
+  box-shadow:
+    inset -1px -1px 0 #ffffff,
+    inset 1px 1px 0 #808080 !important;
+}
+
+/* Override Mantine Switch styles */
+.mantine-Switch-track {
+  background: #ece9d8 !important;
+  border: 2px inset #ece9d8 !important;
+  box-shadow:
+    inset 1px 1px 0 #808080,
+    inset -1px -1px 0 #ffffff !important;
+}
+
+.mantine-Switch-thumb {
+  background: #ffffff !important;
+  border: 1px solid #808080 !important;
+  box-shadow:
+    inset -1px -1px 0 #ffffff,
+    inset 1px 1px 0 #808080 !important;
+}
+
+.mantine-Switch-input:checked+.mantine-Switch-track {
+  background: linear-gradient(to bottom, #316ac5 0%, #4a8cd8 50%, #316ac5 100%) !important;
+}
+
+/* Override Mantine ActionIcon styles */
+.mantine-ActionIcon-root {
+  background: #ece9d8 !important;
+  border: 1px solid #808080 !important;
+  box-shadow:
+    inset -1px -1px 0 #ffffff,
+    inset 1px 1px 0 #808080 !important;
+}
+
+.mantine-ActionIcon-root:hover {
+  background: #f0f0f0 !important;
+}
+
+.mantine-ActionIcon-root:active {
+  border: 1px inset #ece9d8 !important;
+  box-shadow:
+    inset 1px 1px 0 #808080,
+    inset -1px -1px 0 #ffffff !important;
+  background: #d4d0c8 !important;
+}
