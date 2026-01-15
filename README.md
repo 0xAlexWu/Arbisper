@@ -398,16 +398,6 @@ Licensed under the **MIT License**. See [`LICENSE`](./LICENSE) for details.
 
 ---
 
-## 📞 Contact
-
-Have feedback or questions?
-
-- 📧 Email: `your-email@example.com`  
-- 💬 Discord: _Join our community_  
-- 🐦 X / Twitter: `@arbisper`  
-
----
-
 ## 🙏 Acknowledgements
 
 - **XMTP** — decentralized messaging primitives  
